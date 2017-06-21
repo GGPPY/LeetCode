@@ -66,10 +66,10 @@ class Solution(object):
         """
         if not ops:
             return m * n
-        width = min(min([x[0] for x in ops]), m)
-        high = min(min([x[1] for x in ops]), n)
+        width = min([x[0] for x in ops])
+        high = min([x[1] for x in ops])
         return width * high
 
 
 if __name__ == '__main__':
-    print Solution().maxCount(3, 3, [])
+    print Solution().maxCount(3, 3, [[2, 3], [3, 3]])
